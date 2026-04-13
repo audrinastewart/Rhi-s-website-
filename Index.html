@@ -3,23 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My website</title>
-    <style>
-        h1 {
-            color: blue;
-        }
-    </style>
+    <title>Rhi's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <H1>Hello world</H1> 
-   <a href="Home.html">Click me</a>
-   <input type="button" id="btn" value="Click me" onclick="replaceText();">
-   <script>
-        function replaceText() {
-            document.getElementById("btn").value = "Button Clicked!";
-        }
-    </script>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Rhi</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+    </nav>
 
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>Hello, I'm <span class="highlight">Rhi</span></h1>
+            <!--HERE--><h2>Three key words about you</h2>
+            <!--HERE--> <p>Insert what you do here</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn primary-btn">View My Work</a>
+                <a href="#contact" class="btn secondary-btn">Get In Touch</a>
+            </div>
+        </div>
+    </section>
 
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <!--HERE (write a brief description about yourself)--> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus impedit tempore quisquam consequatur facere placeat officiis vitae, adipisci amet reiciendis sint voluptas porro itaque? Accusantium saepe deleniti mollitia in alias.</p>
+                    <!--HERE (continue writing it here)--> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed blanditiis autem iusto fuga impedit facilis, rerum ab id non maxime. Corporis asperiores, iure velit dolor nulla doloribus expedita et quisquam!</p>
+                </div>
+                <div class="about-skills">
+                    <h3>My Skills</h3>
+                    <ul class="skills-list">
+                        <!--HERE (Insert skill)--><li>Skill 1</li>
+                        <!--HERE (Insert skill)--><li>Skill 2</li>
+                        <!--HERE (Insert skill)--><li>Skill 3</li>
+                        <!--HERE (Insert skill)--><li>Skill 4</li>
+                        <!--HERE (Insert skill)--><li>Skill 5</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio/Work Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="section-container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="card-image placeholder-1"></div>
+                    <div class="card-content">
+                        <h3>Project One</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quaerat tempora optio recusandae atque placeat voluptatibus illo, esse commodi soluta vitae molestiae est harum voluptas itaque animi doloremque error rerum?</p>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="card-image placeholder-2"></div>
+                    <div class="card-content">
+                        <h3>Project Two</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolorem animi modi qui ad numquam, ullam cumque asperiores commodi voluptatem. Debitis odit eius libero quae necessitatibus repellendus deleniti accusantium sunt.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="card-image placeholder-3"></div>
+                    <div class="card-content">
+                        <h3>Project Three</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quaerat tempora optio recusandae atque placeat voluptatibus illo, esse commodi soluta vitae molestiae est harum voluptas itaque animi doloremque error rerum?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="contact-subtitle">Interested in working together or just want to say hi?</p>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="How can I help you?"></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn submit-btn" id="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Rhi. All Rights Reserved. Built from scratch.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
