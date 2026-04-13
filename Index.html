@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My website</title>
-    <style>
-        h1 {
-            color: blue;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <H1>Hello world</H1> 
-   <a href="Home.html">Click me</a>
+    <!--Navbar-->
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#blog">Blog</a>
+    </nav>
+
+    <!--Hero Section-->
+    <div id="hero">
+        <h1>Hello world</h1>
+        <h2>I'm Rhi</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nostrum delectus eveniet. Eius natus atque iusto. Reiciendis cum est labore sequi, voluptatum deserunt, vero commodi animi perferendis recusandae, exercitationem possimus.</p>
+    </div>
+
+    <!--About Me-->
+    <div id="about">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi soluta similique accusantium mollitia omnis asperiores numquam tempore ratione? Aspernatur, in amet optio quisquam quis incidunt velit aliquid dicta doloremque dignissimos.</p>
+    </div>
    <input type="button" id="btn" value="Click me" onclick="replaceText();">
-   <script>
-        function replaceText() {
-            document.getElementById("btn").value = "Button Clicked!";
-        }
-    </script>
-
-
+   <script src="script.js"></script>
 </body>
 </html>
