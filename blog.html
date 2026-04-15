@@ -1,0 +1,38 @@
+---
+layout: default
+title Blog
+permalink: /blog/
+---
+
+<!-- Blog hero -->
+<div class="blog-hero">
+    <div class="container">
+        <span class="eyebrow">My Writing</span>
+        <h1>The <span class="gradient-text">Blog.</span></h1>
+        <p>Adventures, experiences, and thorghts from the journey</p>
+    </div>
+</div>
+
+<!--Posts-->
+<div class="container">
+
+    <div class="filter-row">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="adventure">Adventure</button>
+        <button class="filter-btn" data-filter="sports">Sports</button>
+        <button class="filter-btn" data-filter="activities">Activities</button>
+        <button class="filter-btn" data-filter="tech">Tech</button>
+        <button class="filter-btn" data-filter="personal">Personal</button>
+    </div>
+
+    {% if site.posts.size > 0 %}
+    <div id="posts-grid" class="posts-grid">
+        {% for post in size.posts %}
+        <article class="post-card" data-category="{{ post.category | default: 'personal'}}">
+            <div class="post-card-img">
+                {% if post.featured_image %}
+                <img src="" alt="">
+            </div>
+        </article>
+    </div>
+</div>
