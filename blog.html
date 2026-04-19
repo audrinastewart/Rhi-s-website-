@@ -1,6 +1,6 @@
 ---
 layout: default
-title Blog
+title: Blog
 permalink: /blog/
 ---
 
@@ -9,11 +9,11 @@ permalink: /blog/
     <div class="container">
         <span class="eyebrow">My Writing</span>
         <h1>The <span class="gradient-text">Blog.</span></h1>
-        <p>Adventures, experiences, and thorghts from the journey</p>
+        <p>Adventures, experiences, and thoughts from the journey.</p>
     </div>
 </div>
 
-<!--Posts-->
+<!-- Posts -->
 <div class="container">
 
     <div class="filter-row">
@@ -26,13 +26,76 @@ permalink: /blog/
     </div>
 
     {% if site.posts.size > 0 %}
-    <div id="posts-grid" class="posts-grid">
-        {% for post in size.posts %}
-        <article class="post-card" data-category="{{ post.category | default: 'personal'}}">
+    <div class="posts-grid" id="posts-grid">
+        {% for post in site.posts %}
+        <article class="post-card" data-category="{{ post.category | default: 'personal' }}">
             <div class="post-card-img">
                 {% if post.featured_image %}
-                <img src="" alt="">
+                    <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+                {% else %}
+                    <div class="post-cat-bg cat-bg-{{ post.category | default: 'personal' }}">
+                        {% case post.category %}
+                            {% when 'adventure' %}
+                                <i class="fas fa-mountain" style="color:rgba(255,255,255,0.5)"></i>
+                            {% when 'sports' %}
+                                <i class="fas fa-trophy" style="color:rgba(255,255,255,0.5)"></i>
+                            {% when 'activities' %}
+                                <i class="fas fa-lightbulb" style="color:rgba(255,255,255,0.5)"></i>
+                            {% when 'tech' %}
+                                <i class="fas fa-code" style="color:rgba(255,255,255,0.5)"></i>
+                            {% when 'school' %}
+                                <i class="fas fa-book" style="color:rgba(255,255,255,0.5)"></i>
+                            {% else %}
+                                <i class="fas fa-pen" style="color:rgba(255,255,255,0.5)"></i>
+                        {% endcase %}
+                    </div>
+                {% endif %}
+            </div>
+            <div class="post-card-body">
+                <div class="post-card-meta">
+                    <span class="post-cat">{{ post.category | capitalize | default: "Post" }}</span>
+                    <span class="post-date-label">{{ post.date | date: "%b %d, %Y" }}</span>
+                </div>
+                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                <p>
+                    {% if post.excerpt %}
+                        {{ post.excerpt | strip_html | truncate: 130 }}
+                    {% else %}
+                        {{ post.content | strip_html | truncate: 130 }}
+                    {% endif %}
+                </p>
+                <a href="{{ post.url | relative_url }}" class="read-more">
+                    Read more <i class="fas fa-arrow-right" style="font-size:11px"></i>
+                </a>
             </div>
         </article>
+        {% endfor %}
     </div>
+    {% else %}
+    <div style="text-align:center; padding: 80px 0;">
+        <i class="fas fa-pen" style="font-size:48px; color:var(--gray-dim); display:block; margin-bottom:24px;"></i>
+        <p style="color:var(--gray); font-size:16px;">No posts yet &mdash; check back soon.</p>
+    </div>
+    {% endif %}
+
 </div>
+
+<script>
+// Category filter
+document.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(function(b) {
+            b.classList.remove('active');
+        });
+        this.classList.add('active');
+        var filter = this.dataset.filter;
+        document.querySelectorAll('.post-card').forEach(function(card) {
+            if (filter === 'all' || card.dataset.category === filter) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
