@@ -3,118 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rhi's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="My personal website: I am Rhi, a Brisbane school student and rower.">
+    <title>Rhi | Brisbane Rower</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">Rhi</div>
-        <ul class="nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="/blog/">Blog</a></li>
-        </ul>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-            <span class="hamburger"></span>
+    <header class="site-header" data-header>
+        <a class="brand" href="#home" aria-label="Rhi home">
+            <span class="brand-mark">R</span>
+            <span>Rhi</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+            <span></span>
+            <span></span>
         </button>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-        <div class="hero-content">
-            <h1>Hello, I'm <span class="highlight">Rhi</span></h1>
-            <!--HERE--><h2>Three key words about you</h2>
-            <!--HERE--> <p>Insert what you do here</p>
-            <div class="hero-buttons">
-                <a href="#portfolio" class="btn primary-btn">View My Work</a>
-                <a href="#contact" class="btn secondary-btn">Get In Touch</a>
-            </div>
-        </div>
-    </section>
+        <nav class="site-nav" data-nav>
+            <a href="#about">About</a>
+            <a href="#rowing">Rowing</a>
+            <a href="#brisbane">Brisbane</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="section-container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <!--HERE (write a brief description about yourself)--> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus impedit tempore quisquam consequatur facere placeat officiis vitae, adipisci amet reiciendis sint voluptas porro itaque? Accusantium saepe deleniti mollitia in alias.</p>
-                    <!--HERE (continue writing it here)--> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed blanditiis autem iusto fuga impedit facilis, rerum ab id non maxime. Corporis asperiores, iure velit dolor nulla doloribus expedita et quisquam!</p>
-                </div>
-                <div class="about-skills">
-                    <h3>My Skills</h3>
-                    <ul class="skills-list">
-                        <!--HERE (Insert skill)--><li>Skill 1</li>
-                        <!--HERE (Insert skill)--><li>Skill 2</li>
-                        <!--HERE (Insert skill)--><li>Skill 3</li>
-                        <!--HERE (Insert skill)--><li>Skill 4</li>
-                        <!--HERE (Insert skill)--><li>Skill 5</li>
-                    </ul>
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-copy">
+                <p class="eyebrow">Brisbane student athlete</p>
+                <h1>I row with rhythm, grit, and sunshine.</h1>
+                <p class="hero-text">
+                    This is my little corner of the web: rowing, school, teammates, and the early Brisbane mornings that make it all worth it.
+                </p>
+                <div class="hero-actions">
+                    <a class="button primary" href="#rowing">See My Rowing</a>
+                    <a class="button secondary" href="#about">About Me</a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Portfolio/Work Section -->
-    <section id="portfolio" class="portfolio-section">
-        <div class="section-container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-card">
-                    <div class="card-image placeholder-1"></div>
-                    <div class="card-content">
-                        <h3>Project One</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quaerat tempora optio recusandae atque placeat voluptatibus illo, esse commodi soluta vitae molestiae est harum voluptas itaque animi doloremque error rerum?</p>
-                    </div>
-                </div>
-                <div class="portfolio-card">
-                    <div class="card-image placeholder-2"></div>
-                    <div class="card-content">
-                        <h3>Project Two</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolorem animi modi qui ad numquam, ullam cumque asperiores commodi voluptatem. Debitis odit eius libero quae necessitatibus repellendus deleniti accusantium sunt.</p>
-                    </div>
-                </div>
-                <div class="portfolio-card">
-                    <div class="card-image placeholder-3"></div>
-                    <div class="card-content">
-                        <h3>Project Three</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quaerat tempora optio recusandae atque placeat voluptatibus illo, esse commodi soluta vitae molestiae est harum voluptas itaque animi doloremque error rerum?</p>
-                    </div>
+            <div class="hero-media" aria-label="Rower on calm water">
+                <img src="https://unsplash.com/photos/rC-MCsOt0XQ/download?force=true&w=1200" alt="A woman rowing a single scull on calm water">
+                <div class="training-card">
+                    <span>Next session</span>
+                    <strong>5:15 AM</strong>
+                    <small>River, crew, reset</small>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="section-container">
-            <h2 class="section-title">Let's Connect</h2>
-            <p class="contact-subtitle">Interested in working together or just want to say hi?</p>
-            <form id="contact-form" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="How can I help you?"></textarea>
-                </div>
-                <button type="submit" class="btn primary-btn submit-btn" id="btn">Send Message</button>
-            </form>
-        </div>
-    </section>
+        <section class="stats-strip" aria-label="Me at a glance">
+            <div>
+                <strong data-count="4">0</strong>
+                <span>water sessions a week</span>
+            </div>
+            <div>
+                <strong data-count="1">0</strong>
+                <span>very loyal crew</span>
+            </div>
+            <div>
+                <strong data-count="100">0</strong>
+                <span>percent Brisbane energy</span>
+            </div>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Rhi. All Rights Reserved. Built from scratch.</p>
+        <section class="section about" id="about">
+            <div class="section-heading reveal">
+                <p class="eyebrow">About me</p>
+                <h2>Focused at school. Fast on the water. Kind everywhere else.</h2>
+            </div>
+            <div class="about-grid">
+                <article class="about-panel reveal">
+                    <p>
+                        I live and go to school in Brisbane, balancing classes, friends, training, and the occasional very early alarm. Rowing has become my place to build discipline, confidence, and a serious appreciation for calm water.
+                    </p>
+                    <p>
+                        I try to be the kind of teammate who turns up, works hard, and makes the boat feel lighter. This site captures the things I am into right now: rowing, school life, and the city I call home.
+                    </p>
+                </article>
+                <div class="qualities reveal" aria-label="My qualities">
+                    <span>Determined</span>
+                    <span>Thoughtful</span>
+                    <span>Brave</span>
+                    <span>Teammate</span>
+                    <span>River kid</span>
+                    <span>Brisbane local</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section rowing" id="rowing">
+            <div class="section-heading reveal">
+                <p class="eyebrow">On the water</p>
+                <h2>Training days that start before the city wakes.</h2>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card reveal">
+                    <span class="icon">01</span>
+                    <h3>Technique</h3>
+                    <p>I am always working on clean catches, steady finishes, and the small improvements that add up across a season.</p>
+                </article>
+                <article class="feature-card reveal">
+                    <span class="icon">02</span>
+                    <h3>Endurance</h3>
+                    <p>I like the challenge of long sessions, patient pacing, and staying calm when my legs start talking back.</p>
+                </article>
+                <article class="feature-card reveal">
+                    <span class="icon">03</span>
+                    <h3>Crew</h3>
+                    <p>For me, rowing is trust, timing, and showing up for the people in the boat beside me, even when the forecast looks dramatic.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="river-band" id="brisbane">
+            <div class="river-copy reveal">
+                <p class="eyebrow">Brisbane life</p>
+                <h2>School bag by day, oars by sunrise.</h2>
+                <p>
+                    From classrooms to riverbanks, my routine is shaped by the best parts of Brisbane: warm mornings, big skies, and plenty of water to chase.
+                </p>
+            </div>
+            <div class="river-lines" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <div class="contact-card reveal">
+                <p class="eyebrow">Say hi</p>
+                <h2>Send me a note.</h2>
+                <form class="contact-form" data-contact-form>
+                    <label>
+                        Name
+                        <input type="text" name="name" autocomplete="name" required placeholder="Your name">
+                    </label>
+                    <label>
+                        Message
+                        <textarea name="message" rows="4" required placeholder="Write something nice..."></textarea>
+                    </label>
+                    <button class="button primary" type="submit">Send message</button>
+                    <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Built for me in Brisbane. Row well, study hard, enjoy the river.</p>
     </footer>
 
     <script src="script.js"></script>
